@@ -5,7 +5,8 @@ body {
     text-align: center;
     background-image: url("hatsune_miku_art.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -18,11 +19,13 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 10px;
 }
 
 nav ul li a {
@@ -35,16 +38,28 @@ main {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    display: inline-block;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .video-container {
     margin: 20px auto;
     border: 3px solid #457b9d;
     padding: 10px;
-    width: fit-content;
     background-color: rgba(233, 236, 239, 0.9);
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 footer {
@@ -52,4 +67,18 @@ footer {
     padding: 10px;
     border-top: 4px solid #457b9d;
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+    main {
+        padding: 10px;
+        max-width: 100%;
+    }
+    .video-container {
+        max-width: 90%;
+    }
 }
