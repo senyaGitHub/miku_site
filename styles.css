@@ -1,84 +1,52 @@
+/* Background */
 body {
-    background-color: #f8f1f1;
-    color: #6b7280;
-    font-family: Arial, sans-serif;
-    text-align: center;
     background-image: url("hatsune_miku_art.jpg");
     background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #6b7280;
 }
 
-header {
-    background-color: rgba(168, 218, 220, 0.9);
-    padding: 20px;
+/* Navbar */
+.navbar-custom {
+    background-color: rgba(168, 218, 220, 0.9) !important;
     border-bottom: 4px solid #457b9d;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 10px;
-}
-
-nav ul li a {
-    color: #457b9d;
-    text-decoration: none;
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #457b9d !important;
     font-weight: bold;
 }
 
+.navbar-toggler {
+    border-color: #457b9d;
+}
+
+/* Main Content */
 main {
-    padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     margin: 20px auto;
+    padding: 20px;
     max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.video-container {
-    margin: 20px auto;
+/* Video Styling */
+.ratio {
+    max-width: 560px;
+    margin: auto;
     border: 3px solid #457b9d;
     padding: 10px;
     background-color: rgba(233, 236, 239, 0.9);
-    width: 100%;
-    max-width: 560px;
-    display: flex;
-    justify-content: center;
 }
 
-.video-container iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
-
-footer {
+/* Footer */
+.footer-custom {
     background-color: rgba(168, 218, 220, 0.9);
     padding: 10px;
     border-top: 4px solid #457b9d;
     margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    body {
-        background-size: cover;
-        background-position: center;
-    }
-    main {
-        padding: 10px;
-        max-width: 100%;
-    }
-    .video-container {
-        max-width: 90%;
-    }
+    text-align: center;
 }

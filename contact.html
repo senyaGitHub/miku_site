@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hatsune Miku Fan Page</title>
+        <title>Contact - Hatsune Miku Fan Page</title>
 
         <!-- Bootstrap CSS -->
         <link
@@ -17,7 +17,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container">
-                <a class="navbar-brand" href="#">Miku Fan Club</a>
+                <a class="navbar-brand" href="index.html">Miku Fan Club</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -38,7 +38,9 @@
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link active" href="contact.html"
+                                >Contact</a
+                            >
                         </li>
                     </ul>
                 </div>
@@ -47,23 +49,47 @@
 
         <!-- Main Content -->
         <main class="container text-center py-4">
-            <h2>Hatsune Miku Music</h2>
+            <h2>Contact Us</h2>
+            <p>Have a question? Want to say hi? Send us a message!</p>
 
-            <div class="ratio ratio-16x9 my-3">
-                <iframe
-                    src="https://www.youtube.com/embed/y8nKlSIuAOY"
-                    title="Utsu-P - MiKUSABBATH [2020mix]"
-                    allowfullscreen
-                ></iframe>
-            </div>
-
-            <div class="ratio ratio-16x9 my-3">
-                <iframe
-                    src="https://www.youtube.com/embed/-tXpwt29GFM"
-                    title="Utsu-P - デスロウ / Death of the Law feat. 初音ミク"
-                    allowfullscreen
-                ></iframe>
-            </div>
+            <!-- Contact Form -->
+            <form
+                action="https://formsubmit.co/YOUR_EMAIL_HERE"
+                method="POST"
+                class="mx-auto w-50"
+            >
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="form-control"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
         </main>
 
         <!-- Footer -->
